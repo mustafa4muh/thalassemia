@@ -1,0 +1,68 @@
+<nav class="uk-navbar-container" uk-navbar>
+                        <div class="uk-navbar-left">
+                      
+                            <ul class="uk-navbar-nav">
+                                <li class="uk-active"><a routerLink="/">Home</a></li>
+
+                      
+                      
+                                <li *ngIf="isSign">
+                                    <a href="#">Settings</a>
+                                    <div class="uk-navbar-dropdown">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">                      
+                                            <li><a routerLink="ADD">اضافة موضوع للمرض</a></li>                      
+                                            <li *ngFor="let item of tiAra" >
+                                                <a routerLink="Set/{{item.key}}" *ngIf="item.title != '' ; else othWay" >
+                                                    {{item.title}}                                                    
+                                                </a>    
+                                                <ng-template #othWay><a routerLink="Set/{{item.key}}">لم يتم تسمية الموضوع</a></ng-template>
+                                        </li>                                                                  
+
+                                        </ul>
+                                    </div>
+                                </li>                          
+
+
+
+
+
+                                <li><a routerLink="About" *ngIf="!isSign">About</a></li>
+                                
+                            </ul>
+                      
+                        </div>
+
+                        <div class="uk-navbar-right">
+                      
+          
+                            <ul class="uk-navbar-nav">
+                                    <li><a routerLink="LogIn" *ngIf="!isSign">LogIn</a></li>
+
+
+                                <li *ngIf="isSign">
+                                    <a href="#">Account</a>
+                                    <div class="uk-navbar-dropdown">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li class="uk-active"><a routerLink="/user/{{usID}}">Your settings</a></li>                                                                                        
+                                            <li class="uk-nav-divider"></li>
+                                            <li><a routerLink="/add_Admin">Add Admin</a></li>                                            
+                                            <li class="uk-nav-divider"></li>
+                                            <li><a href="#" (click)="LogOut()" >LogOut</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+
+
+
+                            </ul>
+
+
+                        </div>
+                      </nav>
+                      
+                                      
+                
+                
+                

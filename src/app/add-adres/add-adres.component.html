@@ -1,0 +1,38 @@
+<div class="uk-padding mWMob">
+        <div class="uk-card uk-card-default uk-card-body ">
+
+<form class="uk-padding" (onClose)="removeImg()">
+    <fieldset class="uk-fieldset" style="direction: rtl">
+        <legend class="uk-legend">أضافة موضوع خاص بالمرض</legend>
+
+        <div class="uk-margin">
+            <input  class="uk-input" name="title" [(ngModel)]="data.title" type="text" placeholder="عنوان الموضوع" required>
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input" name="subTitle" type="text" [(ngModel)]="data.subTitle" placeholder="وصف لعنوان الموضوع " required>
+        </div>
+        
+
+        <div class="uk-margin">
+            <textarea class="uk-textarea" rows="5" id="deatils" name="deatils" [(ngModel)]="data.deatils" placeholder="التفاصيل 'تكون على شكل فقرة يمكنك اضافة سطر جديد بالضغط على 'سطر جديد''" required></textarea>
+            
+        </div>
+
+        <div class="js-upload" uk-form-custom style="display: block;"><br>
+            <input type="file" multiple  (change)="urlLi($event)" accept=".png,.jpg">
+            <button class="uk-button uk-button-secondary" type="button"  tabindex="-1">حمل الايقونة</button>
+        </div>
+
+        <div class="uk-margin">
+        <button class="uk-button uk-button-primary" type="button" (click)="saveData()" >حفظ</button>&nbsp;
+        <button class="uk-button uk-button-danger"  (click)="removeImg()">الغاء</button>
+        </div>        
+
+
+
+
+
+    </fieldset>
+</form>
+</div>
+</div>

@@ -1,0 +1,44 @@
+<div class="uk-padding mWMob">
+  <div class="uk-card uk-card-default uk-card-body ">
+<form style="padding: 5%;" (onClose)="removeImg()">
+<fieldset class="uk-fieldset" style="direction: rtl">
+
+  <legend class="uk-legend">تعديل بروفايل المستخدم</legend>
+
+
+  <div class="uk-margin">
+      <img class="uk-border" style="display: block;margin-left: auto;margin-right: auto;" width="40" height="40" src="{{thDataImgUrl}}">
+  </div>
+
+  <div class="uk-margin">
+      <input  class="uk-input" name="email" [(ngModel)]="email" type="email" placeholder="Email" required>
+  </div>
+  <div class="uk-margin">
+      <input class="uk-input" name="pass" type="password" [(ngModel)]="pass" placeholder="Password " required>
+  </div>
+  
+
+
+
+  <div class="uk-margin" id="clicks">
+      <button class="uk-button uk-button-secondary"  (click)="GoTo()" style="display: inline;">تراجع</button>  
+  <button class="uk-button uk-button-primary" type="button" (click)="UpdatDat()">حفظ</button>          
+</div>        
+
+
+<h2 class="uk-legend">حذف الحساب الحالي</h2>
+<div class="uk-margin">                    
+    <button class="uk-button uk-button-danger"  (click)="reM()">حذف حسابي</button>
+    </div>        
+
+
+
+
+
+
+
+</fieldset>
+</form>
+</div>
+</div>
+

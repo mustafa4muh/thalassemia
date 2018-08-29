@@ -1,0 +1,21 @@
+.hEE{
+    height: 200px;
+}
+.mWMob {
+    padding-top: 0%;
+    padding-bottom: 0%;
+ }
+@media only screen and (max-width: 700px) {
+    .mWMob {
+       padding: 0%;
+    }
+    .hEE{
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .hEE{
+        height: 200px;
+    }
+}
+

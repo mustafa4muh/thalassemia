@@ -1,0 +1,46 @@
+
+
+
+
+
+        <div class="uk-padding mWMob">
+            <div class="uk-card uk-card-default uk-card-body ">
+    <form class="uk-padding" (onClose)="removeImg()">
+        <fieldset class="uk-fieldset" style="direction: rtl">
+    
+            <legend class="uk-legend">الدخول الى الحساب</legend>
+    
+    
+            <div class="uk-margin">
+                <input  class="uk-input" name="email"  type="email" placeholder="ايميل المستخدم" [(ngModel)]="email" required>
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" name="password" type="password"  placeholder="كلمة المرور" [(ngModel)]="password" required>
+            </div>
+            
+            <div class="uk-margin">
+                <p id="errr"></p>
+            </div>
+         
+        
+         
+    
+            <div class="uk-margin">
+            <button class="uk-button uk-button-primary" type="button" (click)="login()" >دخول</button>&nbsp;
+            <button class="uk-button uk-button-secondary"  (click)="backTo()">رجوع</button>
+            </div>        
+    
+    
+    
+    
+    
+        </fieldset>
+    </form>
+    </div>
+    </div>
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+
+.mWMob {
+    padding-top: 0%;
+    padding-bottom: 0%;
+ }
+@media only screen and (max-width: 700px) {
+    .mWMob {
+       padding: 0%;
+    }
+   
+}
+
